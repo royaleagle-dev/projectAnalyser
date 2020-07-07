@@ -1,0 +1,1 @@
+web: gunicorn PANALYSIS.wsgi --log-file -
