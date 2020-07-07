@@ -1,0 +1,40 @@
+{%extends "project/base.html"%}
+
+{%block topContent%}
+{%endblock%}
+
+{%block content%}
+<div class = "row" style = "margin-top:100px;">
+	<div class = "col-md-8 offset-md-2">
+		<h3 class = "m-3">{{project.name}}</h3>
+		<hr>
+		<div class = "text-center">
+			<p>"{{project.description}}"</p>
+		</div>
+		<div>
+			<h5 class = "text-danger">Start Date</h5>
+			<p class = "medium">{{project.startDate}}</p>
+			<hr style = "margin-right:550px;">
+		</div>
+		<div>
+			<h5 class = "text-danger">End Date</h5>
+			<p class = "medium">{%if project.endDate == None%} N/A {%else%} {{project.endDate}} {%endif%}</p>
+			<hr style = "margin-right:550px;">
+		</div>
+		<div>
+			<h5 class = "text-danger">Status</h5>
+			<p class = "medium">{%if project.completed == False%} Uncompleted {%else%} Completed {%endif%}</p>
+			<hr style = "margin-right:550px;">
+		</div>
+		<div>
+			<h5 class = "text-danger">Developer</h5>
+			<p class = "medium">{{project.developer}}</p>
+		</div>
+		<hr>
+		<div class = "text-right" style = "margin-bottom:25px;">
+			<button href = "" class = "btn btn-info" disabled = "true">Edit</button>
+		</div>
+
+	</div>
+</div>
+{%endblock%}
